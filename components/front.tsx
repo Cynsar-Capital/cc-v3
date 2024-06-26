@@ -21,12 +21,12 @@ export default function FrontPageAnimation() {
   useEffect(() => {
     const handleNextStep = () => {
       if (currentStep < userMessages.length) {
-        setChatSteps((prev) => [
+        setChatSteps((prev): any => [
           ...prev,
           { type: "user", text: userMessages[currentStep] },
         ]);
         setTimeout(() => {
-          setChatSteps((prev) => [
+          setChatSteps((prev): any => [
             ...prev,
             { type: "bot", text: botMessages[currentStep] },
           ]);
@@ -66,7 +66,7 @@ export default function FrontPageAnimation() {
       <div className="w-full h-full">
         {/* Chat area */}
         <div className="flex-1 flex flex-col justify-end items-end space-y-5 py-8">
-          {chatSteps.map((step, index) => (
+          {chatSteps.map((step: any, index): any => (
             <motion.div
               key={index}
               initial="hidden"
