@@ -1,6 +1,8 @@
+import Footer from "@/components/footer";
 import "./globals.css";
 
 import { GeistSans } from "geist/font/sans";
+import Section from "@/components/section";
 
 let title = "Cynsar Capital, lets build capital for everyone";
 let description =
@@ -14,7 +16,7 @@ export const metadata = {
     title,
     description,
   },
-  metadataBase: new URL("https://nextjs-postgres-auth.vercel.app"),
+  metadataBase: new URL("https://cynsar.capital"),
 };
 
 export default function RootLayout({
@@ -24,7 +26,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={GeistSans.variable}>{children}</body>
+      <body className={GeistSans.variable}>
+        {children}
+        <Section />
+        <Footer />
+      </body>
     </html>
   );
 }

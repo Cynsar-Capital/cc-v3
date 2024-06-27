@@ -65,7 +65,7 @@ export default function FrontPageAnimation() {
     <div className="flex h-full items-end justify-end">
       <div className="w-full h-full">
         {/* Chat area */}
-        <div className="flex-1 flex flex-col justify-end items-end space-y-5 py-8">
+        <div className="flex-1 flex flex-col justify-start py-8">
           {chatSteps.map((step: any, index): any => (
             <motion.div
               key={index}
@@ -75,7 +75,7 @@ export default function FrontPageAnimation() {
               transition={{ duration: 0.5 }}
               className={`flex ${
                 step.type === "bot" ? "flex-row-reverse" : ""
-              } justify-end py-2`}
+              } justify-start ps-8`}
             >
               {step.type === "user" ? (
                 <>
